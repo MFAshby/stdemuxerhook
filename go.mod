@@ -1,4 +1,4 @@
-module maqdev.com/stdemuxerhook
+module github.com/maqdev/stdemuxerhook
 
 go 1.18
 
