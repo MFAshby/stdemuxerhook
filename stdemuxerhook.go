@@ -23,10 +23,10 @@ type StdDemuxerHook struct {
 func New(parent *logrus.Logger) *StdDemuxerHook {
 	errLogger := logrus.New()
 	errLogger.Out = os.Stderr
-	errLogger.Level = logrus.DebugLevel
+	errLogger.Level = logrus.TraceLevel
 	outLogger := logrus.New()
 	outLogger.Out = os.Stdout
-	outLogger.Level = logrus.DebugLevel
+	outLogger.Level = logrus.TraceLevel
 
 	// Inherit formatter and level from parent logger
 	errLogger.Formatter = parent.Formatter
