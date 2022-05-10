@@ -59,6 +59,8 @@ func (hook *StdDemuxerHook) Fire(entry *logrus.Entry) error {
 	case logrus.FatalLevel:
 		hook.stdErrLogger.WithFields(entry.Data).Fatal(entry.Message)
 	// stdout
+	case logrus.TraceLevel:
+		hook.stdOutLogger.WithFields(entry.Data).Trace(entry.Message)
 	case logrus.DebugLevel:
 		hook.stdOutLogger.WithFields(entry.Data).Debug(entry.Message)
 	case logrus.InfoLevel:
